@@ -91,12 +91,22 @@ public class DFLMatrixMaker {
     }
    
         System.out.println(over30);
+        String matrix="";
     for(int mati = 0; mati<15; mati++)
          {
              for(int matj = 0; matj<14; matj++)
+             {
+                 matrix+=finalMatrix[mati][matj]+" ";
                  System.out.print(finalMatrix[mati][matj]+" ");
+             }
+             matrix+=";";
              System.out.println();
          }
+        System.out.println(matrix);
+         TextCopy tc = new TextCopy();
+        tc.jTextField1.setText(matrix);
+        tc.setVisible(true);
+        
 }
     /**
      * @param args the command line arguments
@@ -108,6 +118,7 @@ public class DFLMatrixMaker {
         final File folder = new File("./LMF");
         DFLMatrixMaker dm = new DFLMatrixMaker();
         dm.listFilesForFolder(folder);
+       
 
     }
     
